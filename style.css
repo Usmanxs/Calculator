@@ -1,34 +1,64 @@
-body{
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+body {
     padding: 0;
     margin: 0;
     background: linear-gradient(to right, #003366, #006699);
 }
-.claculator{
+
+.claculator {
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     min-height: 100vh;
-    grid-template-columns: repeat(4,100px);
-    grid-template-rows: minmax(120px,auto); repeat(5,100px);
-
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
-.claculator-grid > button
-{
+
+.claculator-grid>button {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid #fff;
     outline: none;
     background-color: white;
-
 }
-.claculator-grid > button:hover{
+
+.claculator-grid>button:hover {
     background-color: #fff;
-    
 }
- .ac{
-     grid-column: span 2;
 
- }
- .equal{
-     grid-column: span 2;
- }
+.ac {
+    grid-column: span 2;
+}
+
+.equal {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output.current {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.output.previous {
+    color: #fff;
+    font-size: 2rem;
+}
