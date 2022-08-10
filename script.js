@@ -15,7 +15,8 @@ button_inpu.forEach(button => {
             input.value = "";
             equal_pressed = 0;
         }
+    
 equal.addEventListener("click", () => {
     equal_pressed =1;
     console.log(equal_pressed);
-}});
+}})

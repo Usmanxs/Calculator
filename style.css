@@ -29,6 +29,8 @@ body
 }
 .display{
     width: 100%;
+    background-color: rgb(247, 4, 4);
+    border-radius: 10px 10px 5px 5px;
 }
 .display>input
 {
