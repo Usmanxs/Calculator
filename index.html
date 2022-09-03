@@ -1,45 +1,41 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link href="style.css" rel="stylesheet">
+ 
 </head>
-
 <body>
-    <div class="calculator">
-        <div class="display">
-            <input type="text" placeholder="0" id="input" disabled>
-        </div>
-        <div class="buttons">
-            <input type="button" value="AC" id="clear">
-            <input type="button" value="del" id="erase">
-            <input type="button" value="&larr;" id="back" >
-            <input type="button" value="/" id="divide">
-
-            <input type="button" value="7" id="seven">
-            <input type="button" value="8" id="eight">
-            <input type="button" value="9" id="nine">
-            <input type="button" value="*" id="multiply">
-            <input type="button" value="4" id="four">
-            <input type="button" value="5" id="five">
-            <input type="button" value="6" id="six">
-            <input type="button" value="-" id="subtract">
-            <input type="button" value="1" id="one">
-            <input type="button" value="2" id="two">
-            <input type="button" value="3" id="three">
-            <input type="button" value="+" id="add">
-            <input type="button" value="." id="decimal">
-            <input type="button" value="0" id="zero">
-            <input type="button" value="=" id="equal">
-
-        
-        </div>
+  <div class="calculator">
+    <div class="display">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
     </div>
+    <div class=buttons>
+    <button data-all-clear class="span-2">AC</button>
+    <button data-delete>DEL</button>
+    <button data-operation>÷</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>*</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>-</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>+</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="span-2">=</button>
+  </div>
+  </div>
+
 
 </body>
-
+<script src="script.js" ></script>
 </html>

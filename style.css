@@ -17,63 +17,75 @@ body
 .calculator
 {   border: 2px ridge rgb(213,27,16);
     width:450px;
-    height: 590px;
+    min-height: 290px;
     background-color: rgba(0,0,0,1) ;
     padding: 50px,30px;
-    position: absolute;
+    position: relative;
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
     border-radius: 10px;
     box-shadow: 0px 40px 70px rgba(0,0,0,1);
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    
 }
 .display{
     width: 100%;
-    background-color: rgb(247, 4, 4);
+    
     border-radius: 10px 10px 5px 5px;
-}
-.display>input
-{
-    width: 100%;
-    padding: 45px 20px;
-    text-align: right;
-    border: none;
-    background-color: transparent;
-    font-size: 50px;
-    font-weight: bold;
-    color: #fff;
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
 
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
-.display input:placeholder{
+
+.button:placeholder{
     color: #fff;
 }
 
 .buttons
 {
-  display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 80px);
     grid-gap: 10px;
-    grid-auto-rows: minmax(65px,auto);
-    margin-top: 40px;
+
 }
-input[type="button"]
-{
-   font-size: 30px;
-   padding: 17px;
+button
+{   
+   font-size: 25px;
+   padding: 0;
+   margin: 0;
    border: none;
    background-color: transparent;
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
 }
-input[type="button"]:hover
+button:hover
 {
     box-shadow: 0 0 20px rgba(213,27,16,1) ;
    background-color: rgba(213,27,16,1) ;
 }
-input[type="button"]#equal
+.span-2
 { 
     grid-column: span 2;
     background-color: rgba(213,27,16,1) ;
-     ;
 }
+.previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  
+  .current-operand {
+    color: white;
+    font-size: 2.5rem;
+  }
