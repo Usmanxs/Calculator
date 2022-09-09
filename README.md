@@ -1,2 +1,7 @@
 # Calculator
-siimple calculator using js
+
+It is a basic calculator
+
+# Build with
+
+Html, CSS and Javascript
